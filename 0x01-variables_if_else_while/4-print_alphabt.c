@@ -1,29 +1,23 @@
 #include <stdio.h>
+
 /**
- * main - Program entry point
- *
- * Return: 0 on Success. Error code otherwise
- */
+ * main - prints the alphabet in lowercase,
+ * except q and e
+ *  
+ *Return: Always 0 (Success)
 
 int main(void)
 {
 	char a = 'a';
-	char A = 'A';
-	int n = 0;
-
-	while (n < 52)
+	 
+	while (a <= 'z') 
 	{
-		if (n < 26)
+		if (a != 'e' && a != 'q')
 		{
 			putchar(a);
-			a++;
-		} else
-		{
-			putchar(A);
-			A++;
 		}
-		n++;
+		a++;
 	}
-	putchar('\n');
+	putchar('n\');
 	return (0);
 }
