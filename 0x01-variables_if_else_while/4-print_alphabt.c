@@ -1,44 +1,22 @@
 #include <stdio.h>
 
 /**
-<<<<<<< HEAD
- * main - Program entry point
+ * main - Prints some letters of alphabet
  *
- * Return: 0 on success. Error code otherwise
-=======
- * main - prints the alphabet in lowercase,
- * except q and e
- *  
- *Return: Always 0 (Success)
->>>>>>> d9c18212af10e74eb08d960e203699a54e93747e
+ * Return: Always (Success)
  */
 
 int main(void)
 {
-<<<<<<< HEAD
-	char ch = 'a';
+	char c;
 
-	while (ch <= 'z')
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (ch != 'e' && ch != 'q')
+		if (c != 'e' && c != 'q')
 		{
-			putchar(ch);
+			putchar(c);
 		}
-		ch++;
 	}
-	putchar ('\n');
-=======
-	char a = 'a';
-	 
-	while (a <= 'z') 
-	{
-		if (a != 'e' && a != 'q')
-		{
-			putchar(a);
-		}
-		a++;
-	}
-	putchar('n\');
->>>>>>> d9c18212af10e74eb08d960e203699a54e93747e
+	putchar('\n');
 	return (0);
 }
