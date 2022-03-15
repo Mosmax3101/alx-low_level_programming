@@ -1,29 +1,23 @@
 #include <stdio.h>
+
 /**
  * main - Program entry point
  *
- * Return: 0 on Success. Error code otherwise
+ * Return: 0 on success. Error code otherwise
  */
 
 int main(void)
 {
-	char a = 'a';
-	char A = 'A';
-	int n = 0;
+	char ch = 'a';
 
-	while (n < 52)
+	while (ch <= 'z')
 	{
-		if (n < 26)
+		if (ch != 'e' && ch != 'q')
 		{
-			putchar(a);
-			a++;
-		} else
-		{
-			putchar(A);
-			A++;
+			putchar(ch);
 		}
-		n++;
+		ch++;
 	}
-	putchar('\n');
+	putchar ('\n');
 	return (0);
 }
