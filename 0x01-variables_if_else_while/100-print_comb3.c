@@ -8,6 +8,7 @@
 
 int main(void)
 {
+<<<<<<< HEAD
 	int n, m;
 
 	for (n = 48; n <= 56; n++)
@@ -24,6 +25,23 @@ int main(void)
 					putchar(' ');
 				}
 			}
+=======
+	int i;
+
+	int j;
+
+	for (i = '0'; i < '9'; i++)
+	{
+		for (j = i + 1; j <= '9'; j++)
+		{
+			putchar(i);
+			putchar(j);
+			
+			if (i == '8' && j == '9')
+			continue;
+		        putchar(',');
+			putchar(' ');
+>>>>>>> 5829e4e8fd9c7deb87cf2bf62fe95c82293c8a01
 		}
 	}
 	putchar('\n');
