@@ -1,40 +1,29 @@
 #include "main.h"
 
 /**
- * _strspn - locates a character in a satring
- * @s: This is the main C string to be scanned
- * @accept: This is the string containing the list of characters to match in s
+ * _strspn - Get a length of a prefix substring
+ * @s: String where substring will look
+ * @accept: Substring of accepted chars
  *
- * Return: return count
+ * Return: Length of occurence
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
-	int count = 0;
-	char *str1, *str2;
+	unsigned int c = 0;
+	char *t = accept;
 
-	str1 = s;
-	str2 = accept;
-
-	i = 0;
-	while (str1[i] != '\0')
+	while (*s++)
 	{
-		j = 0;
-		while (str2[j] != '\0')
-		{
-			if (str2[j] == str1[j])
+		while (*accept++)
+			if (*(s - 1) == *(accept - 1))
 			{
-				count++;
+				c++;
 				break;
 			}
-			j++;
-		}
-		if (s[i] != accept[j])
-		{
+		if (!(*--accept))
 			break;
-		}
-		i++;
+		accept = t;
 	}
-	return (count);
+	return (c);
 }
